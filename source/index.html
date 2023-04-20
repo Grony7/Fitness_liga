@@ -1,64 +1,97 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
-    </div>
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Фитнес центр">
+  <title>Фитнес центр</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<header class="main-header container">
+  <a class="main-header_logo-text">Supergym</a>
+  <a href="tel:88005555555">8-800-555-55-55</a>
+</header>
+<main class="main-container">
+  <section class="main-block">
+    <div class="main-block__wrapper container">
+      <div class="main-block__title-wrapper">
+        <h1>Фитнес центр</h1>
+        <span>омск</span>
+      </div>
+      <p>Тренажёрный зал Групповые занятия Кардио-зона</p>
+      <button class="main-block__button btn">Купить абонемент</button>
+      <div class="main-block__image-wrapper">
+        <picture>
+          <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="img/main-block/content-tablet.webp, img/main-block/content-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/main-block/content.webp, img/main-block/content@2x.webp 2x">
 
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
+          <source media="(max-width: 1199px)"
+                  srcset="img/main-block/content-tablet.jpg, img/main-block/content-tablet@2x.jpg 2x">
+          <img width="500" height="556" src="img/main-block/content.jpg"
+               srcset="img/main-block/content.jpg, img/main-block/content@2x.jpg 2x"
+               alt="Спортивный человек">
+        </picture>
+      </div>
+    </div>
+  </section>
+  <section class="gallery">
+    <div class="gallery__wrapper container">
+      <div class="gallery__text-wrapper">
+        <h2>Тренажерный зал</h2>
+        <p>Просторный зал площадью 900&nbsp;кв/м</p>
+        <div class="gallery__description">
+          <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела
+            и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех
+            спортсменов.</p>
+          <p>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес
+            центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+        </div>
+      </div>
+      <div class="gallery__picture-wrapper">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/gallery/picture-mobile.webp, img/gallery/picture-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="img/gallery/picture-tablet.webp, img/gallery/picture-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/gallery/picture.webp, img/gallery/picture@2x.webp 2x">
+
+          <source media="(max-width: 787px)"
+                  srcset="img/gallery/picture-mobile.jpg, img/gallery/picture-mobile@2x.jpg 2x">
+          <source media="(max-width: 1199px)"
+                  srcset="img/gallery/picture-tablet.jpg, img/gallery/picture-tablet@2x.jpg 2x">
+          <img width="660" height="401" src="img/gallery/picture.jpg"
+               srcset="img/gallery/picture.jpg, img/gallery/picture@2x.jpg 2x" alt="Спортивный зал">
+        </picture>
+      </div>
+      <div class="gallery__video">
+        <video preload="none" width="364" height="228" controls data-video="video">
+          <source src="video/gallery/video1.webm" type="video/webm">
+          <source src="video/gallery/video1.mp4" type="video/mp4">
+        </video>
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/gallery/video-mobile.webp, img/gallery/video-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="img/gallery/video-tablet.webp, img/gallery/video-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/gallery/video.webp, img/gallery/video@2x.webp 2x">
+
+          <source media="(max-width: 787px)" srcset="img/gallery/video-mobile.jpg, img/gallery/video-mobile@2x.jpg 2x">
+          <source media="(max-width: 1199px)" srcset="img/gallery/video-tablet.jpg, img/gallery/video-tablet@2x.jpg 2x">
+          <img class="gallery__video-preview" data-video="preview" width="364" height="228" src="img/gallery/video.jpg"
+               srcset="img/gallery/video.jpg, img/gallery/video@2x.jpg 2x" alt="Спортивный зал">
+        </picture>
+        <div class="gallery__video-filter" data-video="play">
+          <img class="gallery__video-icon" src="img/svg/icon-play.svg" width="100" height="100" alt="кнопка алей">
         </div>
       </div>
     </div>
+  </section>
+</main>
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
+<script src="js/vendor.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
 </html>
