@@ -3,19 +3,32 @@
   padding: 120px 0;
 
   background-color: $color-ghost-white;
-  overflow: hidden;
+  overflow-y: visible;
+
+  @include vp-1199 {
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 64px 0 72px;
+  }
 }
 
-.price__wrapper {
-  overflow: visible;
-}
-
-.price__wrapper > img,
-.price__wrapper > picture > img {
+.price > img,
+.price > picture > img {
   position: absolute;
-  right: -162px;
-  bottom: -216px;
-  transform: rotate(-30deg);
+  right: 0;
+  bottom: -150px;
+
+  @include vp-1199 {
+    width: 347px;
+    height: 444px;
+    bottom: -124px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .price__wrapper h2 {
@@ -27,14 +40,37 @@
   line-height: 65px;
   letter-spacing: 0.03em;
   text-align: center;
+
+  @include vp-1199 {
+    margin: 0 0 10px;
+
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 11px;
+
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
 .price__buttons-wrapper {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr minmax(100px, 500px) 1fr;
   grid-template-areas: '. list .';
 
   margin: 0 0 38px;
+
+  @include vp-1199 {
+    margin: 0 0 46px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr minmax(290px, 350px) 1fr;
+    margin: 0 0 36px;
+  }
 }
 
 .price__buttons-list {
@@ -49,6 +85,16 @@
 
   border-bottom: 2px solid rgba(#787878, 0.2);
   list-style: none;
+
+  @include vp-1199 {
+    gap: 54px;
+  }
+
+  @include vp-767 {
+    gap: 40px;
+    justify-content: space-between;
+    margin: 0;
+  }
 }
 
 .price__button {
@@ -62,6 +108,17 @@
   color: rgba($color-sapphire, 0.5);
   cursor: pointer;
   background-color: transparent;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  @include vp-767 {
+    padding: 11px 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   &.is-active {
     color: $color-sapphire;
@@ -89,6 +146,16 @@
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @include vp-1199 {
+    grid-template-columns: auto;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  @include vp-767 {
+    gap: 35px;
+  }
 }
 
 .price__rate {
@@ -101,17 +168,31 @@
 
   z-index: 1;
 
-  &--colored {
-    padding: 56px 23px 61px;
+  @include vp-1199 {
+    width: 442px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-width: 290px;
+    max-width: 500px;
+    padding: 50px 30px 55px;
+  }
+
+  &:hover {
+    padding: 56px 23px 60px;
     border: 7px solid;
     border-image: linear-gradient(135deg, #d10a42 0%, #00359f 100%) 1;
+    transition: border-image 300ms;
 
     & .price__rate-button {
       padding: 26px 40px;
 
       color: $color-default-white;
       border: none;
-      background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+      background: linear-gradient(97.05deg, $color-torch-red 17.6%, #003eb7 95.31%);
+
+      transition: background 300ms, color 300ms;
     }
   }
 }
@@ -124,6 +205,11 @@
   line-height: 29px;
 
   text-align: center;
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 24px;
+  }
 }
 
 .price__rate > span {
@@ -135,6 +221,10 @@
   line-height: 24px;
   color: #495a7d;
   text-align: center;
+
+  @include vp-767 {
+    margin: 0 0 46px;
+  }
 }
 
 .price__cost-wrapper {
@@ -146,6 +236,13 @@
   font-size: 60px;
   line-height: 60px;
   text-align: center;
+
+  @include vp-767 {
+    margin: 0 0 30px;
+
+    font-size: 48px;
+    line-height: 72px;
+  }
 }
 
 .price__cost-wrapper span:not(.rouble)::after {
@@ -165,6 +262,13 @@
 
   opacity: 0.48;
   z-index: -1;
+
+  @include vp-767 {
+    bottom: 15px;
+
+    font-size: 80px;
+    line-height: 80px;
+  }
 }
 
 .price__cost-wrapper > span:not(.rouble) {
@@ -188,4 +292,8 @@
   border: 2px solid $color-sapphire;
 
   cursor: pointer;
+
+  @include vp-767 {
+    width: 206px;
+  }
 }

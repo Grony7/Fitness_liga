@@ -90,13 +90,18 @@
     </div>
   </section>
   <section class="price">
-    <div class="price__wrapper container" data-tabs="parent">
-      <picture>
-        <source type="image/webp" srcset="img/price/background.webp, img/price/background@2x.webp 2x">
+    <picture>
+      <source type="image/webp" media="(max-width: 1199px)"
+              srcset="img/price/background-tablet.webp, img/price/background-tablet@2x.webp 2x">
+      <source type="image/webp" srcset="img/price/background.webp, img/price/background@2x.webp 2x">
 
-        <img width="322" height="385" src="img/price/background.png"
-             srcset="img/price/background.png, img/price/background@2x.png 2x" alt="бублики">
-      </picture>
+      <source media="(max-width: 1199px)"
+              srcset="img/price/background-tablet.png, img/price/background-tablet@2x.png 2x">
+      <img width="287" height="494" src="img/price/background.png"
+           srcset="img/price/background.png, img/price/background@2x.png 2x"
+           alt="Спортивные блины">
+    </picture>
+    <div class="price__wrapper container" data-tabs="parent">
       <h2>Абонементы</h2>
       <div class="price__buttons-wrapper" data-tabs="controls">
         <ul class="price__buttons-list">
@@ -129,7 +134,7 @@
             <a class="price__rate-button" href="#">купить абонемент</a>
           </li>
 
-          <li class="price__rate price__rate--colored">
+          <li class="price__rate">
             <h3>Дневной</h3>
             <span>с 8:00 до 17:00</span>
             <div class="price__cost-wrapper">
@@ -161,7 +166,7 @@
             <a class="price__rate-button" href="#">купить абонемент</a>
           </li>
 
-          <li class="price__rate price__rate--colored">
+          <li class="price__rate">
             <h3>Дневной</h3>
             <span>с 8:00 до 17:00</span>
             <div class="price__cost-wrapper">
@@ -193,7 +198,7 @@
             <a class="price__rate-button" href="#">купить абонемент</a>
           </li>
 
-          <li class="price__rate price__rate--colored">
+          <li class="price__rate">
             <h3>Дневной</h3>
             <span>с 8:00 до 17:00</span>
             <div class="price__cost-wrapper">
@@ -213,6 +218,39 @@
             <a class="price__rate-button" href="#">купить абонемент</a>
           </li>
         </ul>
+      </div>
+    </div>
+  </section>
+  <section class="promo">
+    <div class="promo__wrapper container">
+      <div class="promo__text-wrapper">
+        <h2>Super games</h2>
+        <dl class="promo__date-wrapper">
+          <dt>Дата</dt>
+          <dd>7<span>Марта<br>2019</span></dd>
+        </dl>
+        <dl class="promo__time-wrapper">
+          <dt>Время</dt>
+          <dd>12:00</dd>
+        </dl>
+        <p>Ежегодные соревнования по&nbsp;CrossFit</p>
+        <a class="btn" href="#">заполнить заявку</a>
+      </div>
+      <div class="promo__image-wrapper">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/promo/content-mobile.webp, img/promo/content-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="img/promo/content-tablet.webp, img/promo/content-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/promo/content.webp, img/promo/content@2x.webp 2x">
+
+          <source media="(max-width: 787px)" srcset="img/promo/content-mobile.jpg, img/promo/content-mobile@2x.jpg 2x">
+          <source media="(max-width: 1199px)"
+                  srcset="img/promo/content-tablet.jpg, img/promo/content-tablet@2x.jpg 2x">
+          <img width="660" height="500" src="img/promo/content.jpg"
+               srcset="img/promo/content.jpg, img/promo/content@2x.jpg 2x"
+               alt="Спортивный человек">
+        </picture>
       </div>
     </div>
   </section>
