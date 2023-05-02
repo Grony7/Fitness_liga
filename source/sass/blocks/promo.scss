@@ -30,8 +30,8 @@
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(3, auto) 1fr;
   grid-template-areas:
-    "title date"
-    "title time"
+    "title moment"
+    "title moment"
     "text text"
     "button button";
 
@@ -73,6 +73,11 @@
   }
 }
 
+.promo__moment-wrapper {
+  margin: 0;
+  grid-area: moment;
+}
+
 .promo__date-wrapper,
 .promo__time-wrapper {
   display: flex;
@@ -81,7 +86,7 @@
 
 .promo__date-wrapper dt,
 .promo__time-wrapper dt {
-  margin: 0 0 4px;
+  margin: 0 auto 4px 0;
 
   font-size: 18px;
   line-height: 27px;
@@ -96,7 +101,7 @@
 
 .promo__date-wrapper dd,
 .promo__time-wrapper dd {
-  margin: 0;
+  margin: 0 auto 0 0;
   border-top: 1px solid $color-default-white;
   font-weight: 700;
   font-size: 40px;
@@ -109,8 +114,6 @@
 }
 
 .promo__date-wrapper {
-  grid-area: date;
-
   margin: -4px auto 15px 0;
 
   @include vp-1199 {
@@ -140,8 +143,6 @@
 }
 
 .promo__time-wrapper {
-  grid-area: time;
-
   margin: 0 auto auto 0;
 }
 

@@ -19,7 +19,7 @@
   }
 }
 
-.main-header_logo-text {
+.main-header__logo-text {
   display: block;
   margin: 0;
   text-transform: uppercase;
@@ -41,7 +41,7 @@
   }
 }
 
-.main-header a:not(.main-header_logo-text) {
+.main-header a:not(.main-header__logo-text) {
   margin: 0 0 auto;
   font-family: $ff-alumni-sans;
   font-weight: 600;
