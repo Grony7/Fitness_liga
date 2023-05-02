@@ -8,6 +8,8 @@ export const playVideo = () => {
       playButton.remove();
       preview.remove();
       video.play();
+      video.setAttribute('tabindex', '0');
+      video.focus();
     };
 
     const handleKeyUp = (event) => {
