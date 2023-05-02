@@ -2307,7 +2307,7 @@ button,
   z-index: 10;
 }
 
-.main-header_logo-text {
+.main-header__logo-text {
   display: block;
   margin: 0;
   text-transform: uppercase;
@@ -2319,7 +2319,7 @@ button,
   color: #ffffff;
 }
 
-.main-header a:not(.main-header_logo-text) {
+.main-header a:not(.main-header__logo-text) {
   margin: 0 0 auto;
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-weight: 600;
@@ -2328,15 +2328,15 @@ button,
   letter-spacing: 0.03em;
 }
 
-.main-header a:not(.main-header_logo-text):hover {
+.main-header a:not(.main-header__logo-text):hover {
   opacity: 0.7;
 }
 
-.main-header a:not(.main-header_logo-text):active {
+.main-header a:not(.main-header__logo-text):active {
   opacity: 0.5;
 }
 
-.main-header a:not(.main-header_logo-text):focus-visible {
+.main-header a:not(.main-header__logo-text):focus-visible {
   border-radius: 3px;
   opacity: 1;
   outline: 2px solid #ffffff;
@@ -3131,7 +3131,7 @@ button,
   grid-template-columns: repeat(2, auto);
   -ms-grid-rows: (auto)[3] 1fr;
   grid-template-rows: repeat(3, auto) 1fr;
-  grid-template-areas: "title date" "title time" "text text" "button button";
+  grid-template-areas: "title moment" "title moment" "text text" "button button";
   background-color: #ed0233;
 }
 
@@ -3151,6 +3151,14 @@ button,
   text-transform: uppercase;
 }
 
+.promo__moment-wrapper {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  margin: 0;
+  grid-area: moment;
+}
+
 .promo__date-wrapper,
 .promo__time-wrapper {
   display: -webkit-box;
@@ -3164,14 +3172,14 @@ button,
 
 .promo__date-wrapper dt,
 .promo__time-wrapper dt {
-  margin: 0 0 4px;
+  margin: 0 auto 4px 0;
   font-size: 18px;
   line-height: 27px;
 }
 
 .promo__date-wrapper dd,
 .promo__time-wrapper dd {
-  margin: 0;
+  margin: 0 auto 0 0;
   border-top: 1px solid #ffffff;
   font-weight: 700;
   font-size: 40px;
@@ -3179,9 +3187,6 @@ button,
 }
 
 .promo__date-wrapper {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: date;
   margin: -4px auto 15px 0;
 }
 
@@ -3203,9 +3208,6 @@ button,
 }
 
 .promo__time-wrapper {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: time;
   margin: 0 auto auto 0;
 }
 
@@ -3833,12 +3835,12 @@ button,
     padding-top: 34px;
   }
 
-  .main-header_logo-text {
+  .main-header__logo-text {
     font-size: 24px;
     line-height: 29px;
   }
 
-  .main-header a:not(.main-header_logo-text) {
+  .main-header a:not(.main-header__logo-text) {
     margin: 0;
     font-size: 24px;
     line-height: 29px;
@@ -4394,12 +4396,12 @@ button,
     padding-top: 15px;
   }
 
-  .main-header_logo-text {
+  .main-header__logo-text {
     font-size: 20px;
     line-height: 24px;
   }
 
-  .main-header a:not(.main-header_logo-text) {
+  .main-header a:not(.main-header__logo-text) {
     font-size: 20px;
     line-height: 24px;
   }
