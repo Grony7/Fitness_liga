@@ -100,7 +100,7 @@
   }
 }
 
-.advantages__central-item > span {
+.advantages__central-item > dt {
   display: block;
 
   margin: 0 0 34px;
@@ -118,7 +118,7 @@
   }
 }
 
-.advantages__central-item > span > span {
+.advantages__central-item span {
   display: block;
 
   font-weight: 700;
@@ -135,7 +135,7 @@
   }
 }
 
-.advantages__central-item > p {
+.advantages__central-item > dd {
   margin: 0;
 
   font-size: 16px;
@@ -215,7 +215,7 @@
   }
 }
 
-.advantages__regular-item > h3 {
+.advantages__regular-item > dt {
   grid-area: title;
 
   margin: 3px 0 6px;
@@ -232,7 +232,7 @@
   }
 }
 
-.advantages__regular-item > span {
+.advantages__regular-item > dd:first-of-type {
   grid-area: number;
 
   margin: 0 0 auto;
@@ -258,7 +258,7 @@
   }
 }
 
-.advantages__regular-item > span > span {
+.advantages__regular-item span {
   display: block;
 
   font-size: 14px;
@@ -271,7 +271,7 @@
   }
 }
 
-.advantages__regular-item > p {
+.advantages__regular-item > dd:last-of-type {
   grid-area: text;
 
   margin: 0 0 auto;

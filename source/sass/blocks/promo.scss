@@ -123,7 +123,7 @@
   align-items: center;
 }
 
-.promo__date-wrapper dd > span {
+.promo__date-wrapper span {
   display: block;
   margin: 0 0 0 7px;
 
@@ -148,7 +148,10 @@
 .promo__text-wrapper > p {
   grid-area: text;
 
-  margin: 17px 0 48px;
+  margin: 17px 0 45px;
+
+  font-size: 18px;
+  line-height: 27px;
 
   @include vp-1199 {
     margin: 7px 0 29px;

@@ -34,7 +34,7 @@
   }
 }
 
-.top-action__text-wrapper h3 > span {
+.top-action__text-wrapper span {
   margin: 0;
 
   display: block;
@@ -44,6 +44,9 @@
 
 .top-action__text-wrapper p {
   margin: 0 0 6px;
+
+  font-size: 18px;
+  line-height: 27px;
 }
 
 .top-action__text-wrapper a {
