@@ -23,21 +23,21 @@
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
-
-@import "blocks/header/main-header";
-
-@import "blocks/main/reviews";
-@import "blocks/main/action-item";
-@import "blocks/main/top-action";
-@import "blocks/main/action.scss";
-@import "blocks/main/advantages";
-@import "blocks/main/card";
-@import "blocks/main/coaches";
-@import "blocks/main/promo";
-@import "blocks/main/price";
-@import "blocks/main/gallery";
-@import "blocks/main/main-block";
-@import "blocks/main/main-container";
-
-// ---------------------------------
-
+@import "blocks/form";
+@import "blocks/main-header";
+@import "blocks/contacts";
+@import "blocks/feedback";
+@import "blocks/reviews";
+@import "blocks/action-item";
+@import "blocks/top-action";
+@import "blocks/action";
+@import "blocks/advantages";
+@import "blocks/card";
+@import "blocks/coaches";
+@import "blocks/promo";
+@import "blocks/price";
+@import "blocks/gallery";
+@import "blocks/main-block";
+@import "blocks/main-container";
+@import "blocks/social-network";
+@import "blocks/main-footer";

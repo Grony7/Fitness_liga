@@ -23,7 +23,16 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   }
 }
