@@ -142,7 +142,6 @@
 
   width: 364px;
   height: 228px;
-  outline: none;
 
   @include vp-1199 {
     left: 50%;
@@ -170,6 +169,7 @@
   object-fit: cover;
   width: 364px;
   height: 228px;
+  outline: none;
 
   @include vp-1199 {
     width: 266px;
