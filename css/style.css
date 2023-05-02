@@ -2786,24 +2786,20 @@ button,
 .advantages__list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 60px 240px 60px 1fr;
+  -ms-grid-columns: 1fr 240px 1fr;
   grid-template-columns: 1fr 240px 1fr;
-  -ms-grid-rows: auto 143px auto;
-  grid-template-areas: ". center-item ." ". center-item .";
+  grid-auto-flow: dense;
   gap: 143px 60px;
   margin: 0;
   padding: 0 60px;
 }
 
 .advantages__central-item {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 3;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  grid-row: 1/-1;
-  grid-area: center-item;
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
   width: 100%;
   height: auto;
   padding: 54px 30px 58px;
@@ -2856,7 +2852,7 @@ button,
   grid-column: -2/-1;
 }
 
-.advantages__regular-item:not(:nth-last-child(-n+3))::after {
+.advantages__regular-item:not(:nth-last-child(-n+2))::after {
   content: "";
   position: absolute;
   bottom: -73px;
@@ -3969,23 +3965,18 @@ button,
   }
 
   .advantages__list {
-    -ms-grid-columns: 1fr 30px 1fr;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: auto 44px auto 44px auto;
-    grid-template-areas: ". ." "center-item center-item" ". .";
     gap: 44px 30px;
     padding: 0;
   }
 
   .advantages__central-item {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-
-  .advantages__central-item {
     padding: 30px 30px 40px;
+    -ms-grid-row-span: 1;
+    grid-row: span 1;
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
     width: 442px;
     margin: 0 auto;
   }
@@ -4013,7 +4004,7 @@ button,
     padding: 0;
   }
 
-  .advantages__regular-item:not(:nth-last-child(-n+3))::after {
+  .advantages__regular-item:not(:nth-last-child(-n+2))::after {
     content: none;
     display: none;
   }
@@ -4591,21 +4582,16 @@ button,
   }
 
   .advantages__list {
-    grid-auto-columns: 100%;
-    grid-template-areas: "." "." "center-item" "." ".";
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     gap: 40px;
   }
 
   .advantages__central-item {
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
     -ms-grid-column-span: 1;
-  }
-
-  .advantages__central-item {
-    grid-column: 1/-1;
-    width: 100%;
+    grid-column: span 1;
+    width: calc(100% + 30px);
+    margin: 0 -15px;
     padding: 36px 30px 44px;
   }
 
