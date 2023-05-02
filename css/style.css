@@ -3520,7 +3520,6 @@ button,
   bottom: 0;
   width: 364px;
   height: 228px;
-  outline: none;
 }
 
 .gallery__video video {
@@ -3528,6 +3527,7 @@ button,
   object-fit: cover;
   width: 364px;
   height: 228px;
+  outline: none;
 }
 
 .gallery__video-filter {
