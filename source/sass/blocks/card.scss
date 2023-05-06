@@ -57,7 +57,7 @@
 }
 
 .card__image-wrapper {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
 
@@ -69,13 +69,22 @@
 
 .card__image-wrapper img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 260 / 294;
 
   object-fit: cover;
+
+  @include vp-1199 {
+    aspect-ratio: 268 / 294;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 226 / 274;
+  }
 }
 
 .card__text-wrapper {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
 

@@ -4,14 +4,23 @@ export const coachesSwiper = () => {
     speed: 400,
     spaceBetween: 30,
     loop: true,
-    slidesPerView: 'auto',
+    slidesPerView: 1,
+    autoHeight: true,
+    initialSlide: -4,
     navigation: {
       nextEl: '.coaches__button--next',
       prevEl: '.coaches__button--prev',
     },
+    keyboard: {
+      enabled: true,
+    },
     breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
       1200: {
         spaceBetween: 40,
+        slidesPerView: 4,
       },
     },
   });
@@ -22,6 +31,7 @@ export const reviewsSwiper = () => {
   new Swiper('.reviews__swiper', {
     speed: 400,
     spaceBetween: 30,
+    autoHeight: true,
     navigation: {
       nextEl: '.reviews__button--next',
       prevEl: '.reviews__button--prev',

@@ -4,7 +4,6 @@
   left: 50%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 10px;
   color: $color-default-white;
   transform: translateX(-50%);
@@ -19,9 +18,10 @@
   }
 }
 
+
 .main-header__logo-text {
   display: block;
-  margin: 0;
+  margin: 0 0 auto;
   text-transform: uppercase;
   font-family: $ff-alumni-sans;
   font-weight: 600;
@@ -41,7 +41,13 @@
   }
 }
 
-.main-header a:not(.main-header__logo-text) {
+.main-header__content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.main-header__content-wrapper > a {
   margin: 0 0 auto;
   font-family: $ff-alumni-sans;
   font-weight: 600;

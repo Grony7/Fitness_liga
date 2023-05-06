@@ -24,10 +24,14 @@
 }
 
 .action-item p {
-  margin: 0;
+  margin: 0 0 30px;
 
   font-size: 16px;
   line-height: 22px;
+
+  @include vp-767 {
+    margin: 0 0 24px;
+  }
 }
 
 .action-item a {
