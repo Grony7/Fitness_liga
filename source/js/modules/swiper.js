@@ -16,6 +16,7 @@ export const coachesSwiper = () => {
     },
     breakpoints: {
       768: {
+        spaceBetween: 30,
         slidesPerView: 2,
       },
       1200: {
